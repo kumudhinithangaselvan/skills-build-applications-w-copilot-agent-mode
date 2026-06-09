@@ -7,7 +7,7 @@ const API_BASE = import.meta.env.VITE_CODESPACE_NAME
 export default function Leaderboard() {
   const [leaderboard, setLeaderboard] = useState([]);
   useEffect(() => {
-    fetch(`${API_BASE}/api/leaderboard/`)
+    fetch(`${API_BASE}/api/leaderboard/`) // -8000.app.github.dev/api/leaderboard
       .then(res => res.json())
       .then(data => setLeaderboard(Array.isArray(data) ? data : data.results || []))
       .catch(console.error);

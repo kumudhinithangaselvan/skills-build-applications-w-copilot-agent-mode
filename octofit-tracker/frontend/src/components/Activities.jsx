@@ -7,7 +7,7 @@ const API_BASE = import.meta.env.VITE_CODESPACE_NAME
 export default function Activities() {
   const [activities, setActivities] = useState([]);
   useEffect(() => {
-    fetch(`${API_BASE}/api/activities/`)
+    fetch(`${API_BASE}/api/activities/`) // -8000.app.github.dev/api/activities
       .then(res => res.json())
       .then(data => setActivities(Array.isArray(data) ? data : data.results || []))
       .catch(console.error);

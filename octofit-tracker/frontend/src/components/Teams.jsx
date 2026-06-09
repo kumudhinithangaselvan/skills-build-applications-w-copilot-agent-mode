@@ -7,7 +7,7 @@ const API_BASE = import.meta.env.VITE_CODESPACE_NAME
 export default function Teams() {
   const [teams, setTeams] = useState([]);
   useEffect(() => {
-    fetch(`${API_BASE}/api/teams/`)
+    fetch(`${API_BASE}/api/teams/`) // -8000.app.github.dev/api/teams
       .then(res => res.json())
       .then(data => setTeams(Array.isArray(data) ? data : data.results || []))
       .catch(console.error);
